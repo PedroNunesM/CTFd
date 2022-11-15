@@ -6,13 +6,13 @@
 			</button>
 			<ul class="nav nav-tabs">
 				<li class="nav-item">
-					<a class="nav-link active" href="#challenge">Challenge</a>
+					<a class="nav-link active" href="#challenge">Desafio</a>
 				</li>
 				{% block solves %}
 					<li class="nav-item">
 						<a class="nav-link challenge-solves" href="#solves">
 							{% if solves != None %}
-								{{ solves }} {% if solves > 1 %}Solves{% else %}Solves{% endif %}
+								{{ solves }} {% if solves > 1 %}Respostas{% else %}Resposta{% endif %}
 							{% endif %}
 						</a>
 					</li>
@@ -45,7 +45,7 @@
 								{% elif conn.startswith("http") %}
 									{{ conn | urlize(target="_blank") }}
 								{% else %}
-									<code>{{ conn }}</code>
+									<code>{{ conn }}opa</code>
 								{% endif %}
 							{% endblock %}
 						</span>
@@ -56,16 +56,16 @@
 									<a class="btn btn-info btn-hint btn-block load-hint" href="javascript:;" data-hint-id="{{ hint.id }}">
 										{% if hint.content %}
 											<small>
-												View Hint
+												Visualizar dica
 											</small>
 										{% else %}
 											{% if hint.cost %}
 												<small>
-													Unlock Hint for {{ hint.cost }} points
+													Desbloquear dica por {{ hint.cost }} pontos
 												</small>
 											{% else %}
 												<small>
-													View Hint
+													Visualizar dica
 												</small>
 											{% endif %}
 										{% endif %}
@@ -137,9 +137,9 @@
 								<table class="table table-striped text-center">
 									<thead>
 									<tr>
-										<td><b>Name</b>
+										<td><b>Usuário</b>
 										</td>
-										<td><b>Date</b>
+										<td><b>Data</b>
 										</td>
 									</tr>
 									</thead>

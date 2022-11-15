@@ -48,12 +48,12 @@
 			<div>
 				<h2 class="text-center">
 					{% if account.place %}
-						{{ account.place }} <small>place</small>
+						{{ account.place }} <small>lugar</small>
 					{% endif %}
 				</h2>
 				<h2 class="text-center">
 					{% if account.place %}
-						{{ account.score }} <small>points</small>
+						{{ account.score }} <small>Pontos</small>
 					{% endif %}
 				</h2>
 			</div>
@@ -103,7 +103,7 @@
 
 			<div class="row">
 				<div class="col-md-12">
-					<h3>Awards</h3>
+					<h3>Prêmios</h3>
 				</div>
 				{% for award in awards %}
 					<div class="col-md-3 col-sm-6">
@@ -112,7 +112,7 @@
 							<br>
 							<strong>{{ award.name }}</strong>
 						</p>
-						<p class="text-center">{{ award.category or ""}}</p>
+						<p class="text-center">{% if award.category == 'hints' %} Dica {% else %}{{ award.category or ""}}{% endif %}</p>
 						<p class="text-center">{{ award.description or ""}}</p>
 						<p class="text-center">{{ award.value }}</p>
 					</div>
@@ -123,14 +123,14 @@
 
 			<div class="row">
 				<div class="col-md-12">
-					<h3>Solves</h3>
+					<h3>Resolvidos</h3>
 					<table class="table table-striped">
 						<thead>
 						<tr>
-							<td><b>Challenge</b></td>
-							<td class="d-none d-md-block d-lg-block"><b>Category</b></td>
-							<td><b>Value</b></td>
-							<td><b>Time</b></td>
+							<td><b>Desafio</b></td>
+							<td class="d-none d-md-block d-lg-block"><b>Categoria</b></td>
+							<td><b>Valor</b></td>
+							<td><b>Data</b></td>
 						</tr>
 						</thead>
 						<tbody>

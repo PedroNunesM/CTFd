@@ -68,7 +68,7 @@ function tokenGenerate(event) {
     .then(function(response) {
       if (response.success) {
         let body = $(`
-        <p>Please copy your API Key, it won't be shown again!</p>
+        <p>Copie sua chave de API, ela não será exibida novamente!</p>
         <div class="input-group mb-3">
           <input type="text" id="user-token-result" class="form-control" value="${
             response.data.value
@@ -99,8 +99,8 @@ function deleteToken(event) {
   const id = $elem.data("token-id");
 
   ezQuery({
-    title: "Delete Token",
-    body: "Are you sure you want to delete this token?",
+    title: "Deletar Token",
+    body: "Tem certeza de que deseja excluir este token?",
     success: function() {
       CTFd.fetch("/api/v1/tokens/" + id, {
         method: "DELETE"

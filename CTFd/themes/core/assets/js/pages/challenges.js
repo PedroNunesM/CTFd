@@ -401,7 +401,7 @@ setInterval(update, 300000); // Update every 5 minutes.
 
 const displayHint = data => {
   ezAlert({
-    title: "Hint",
+    title: "Dica",
     body: data.html,
     button: "Got it!"
   });
@@ -409,8 +409,8 @@ const displayHint = data => {
 
 const displayUnlock = id => {
   ezQuery({
-    title: "Unlock Hint?",
-    body: "Are you sure you want to open this hint?",
+    title: "Desbloquear dica?",
+    body: "Tem certeza de que deseja abrir esta dica?",
     success: () => {
       const params = {
         target: id,
